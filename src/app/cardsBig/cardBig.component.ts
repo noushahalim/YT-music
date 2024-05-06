@@ -1,11 +1,11 @@
 import { Component, Input } from "@angular/core";
 
 @Component({
-    selector:'app-card',
-    templateUrl:'./card.component.html'
+    selector:'app-cardBig',
+    templateUrl:'./cardBig.component.html'
 })
 
-export class cardComponent{
+export class cardBigComponent{
     @Input()
     image:string=''
     @Input()

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
     selector:'app-scroll',
@@ -6,6 +6,10 @@ import { Component } from "@angular/core";
 })
 
 export class scrollComponent{
+    @Input()
     secTitle:string='sample sec title'
+    @Input()
     mainTitle:string='sample main title'
+    @Input()
+    buttonTitle:string='Play all'
 }
