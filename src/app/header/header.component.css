@@ -1,0 +1,7 @@
+.header {
+    transition: background-color 0.3s ease-in-out;
+  }
+.adj{
+    margin-left: 3px;
+    /* color: #808080af; */
+}
