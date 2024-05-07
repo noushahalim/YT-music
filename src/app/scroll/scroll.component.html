@@ -6,7 +6,7 @@
         <p *ngIf="mainTitle" class="text-white text-3xl font-semibold w-4/5">{{mainTitle}}</p>
         <div class="flex items-center gap-4">
             <app-button *ngIf="buttonTitle" [title]="buttonTitle" [style]="'text-white border border-[#353535] pl-2 pr-2 pt-1 pb-1 rounded-full hover:bg-[#353535] text-sm'"></app-button>
-            <div class="ml-4 w-8 h-8 border border-[#353535] rounded-full flex items-center justify-center hover:bg-[#353535]">
+            <div class="{{addClass}} w-8 h-8 border border-[#353535] rounded-full flex items-center justify-center hover:bg-[#353535]">
                 <i class="fa-solid fa-angle-left text-white"></i>
             </div>
             <div class="w-8 h-8 border border-[#353535] rounded-full flex items-center justify-center hover:bg-[#353535]">
@@ -15,6 +15,6 @@
         </div>
     </div>
 </div>
-<div class="w-[930px] overflow-x-auto flex">
+<div class="mb-28 w-[930px] overflow-x-auto flex {{scrollClass}}">
     <ng-content></ng-content>
 </div>

@@ -1,5 +1,4 @@
 import { Injectable } from "@angular/core";
-import { title } from "process";
 
 @Injectable({
     providedIn:'root'
@@ -66,7 +65,7 @@ export class MusicService{
             secTitle:'Palak Munchal'
         },
         {
-            imagePath:'../../assets/images/songs/image.jpg',
+            imagePath:'../../assets/images/songs/image012.jpg',
             title:'Phir Bhi Tumko Chaahunga',
             secTitle:'Shasha Tirupati, mithoon..'
         },

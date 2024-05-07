@@ -10,6 +10,7 @@ import { homeComponent } from './home/home.component';
 import { scrollComponent } from './scroll/scroll.component';
 import { cardComponent } from './cards/card.component';
 import { cardBigComponent } from './cardsBig/cardBig.component';
+import { cardMiniComponent } from './cardsMini/cardMini.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { cardBigComponent } from './cardsBig/cardBig.component';
     homeComponent,
     scrollComponent,
     cardComponent,
-    cardBigComponent
+    cardBigComponent,
+    cardMiniComponent
   ],
   imports: [
     BrowserModule,

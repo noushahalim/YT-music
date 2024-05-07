@@ -1,37 +1,31 @@
 <div class="pl-24 pt-12 pr-24 pb-12 ml-56"> <!--ml-56-->
     <app-button *ngFor="let category of categories" [title]="category" [style]="categoryStyle"></app-button>
-    <app-scroll >
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-
+    <app-scroll [mainTitle]="'Indias Biggest Hits'" [secTitle]="'MUSIC THATS HOT AND HAPPENING!'" [buttonTitle]="''">
+        <app-card *ngFor="let song of indiasBiggesthits" [image]="song.imagePath" [songName]="song.title" [songDesc]="song.secTitle"></app-card>
     </app-scroll>
-    <app-scroll >
-        <app-cardBig></app-cardBig>
-        <app-cardBig></app-cardBig>
-        <app-cardBig></app-cardBig>
-        <app-cardBig></app-cardBig>
-        <app-cardBig></app-cardBig>
-        <app-cardBig></app-cardBig>
-        <app-cardBig></app-cardBig>
-        <app-cardBig></app-cardBig>
-        <app-cardBig></app-cardBig>
-        <app-cardBig></app-cardBig>
-    </app-scroll>
-    <app-scroll >
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
 
+    <app-scroll [mainTitle]="'Recommented Music Videos'" [secTitle]="''">
+        <app-cardBig *ngFor="let song of RecomentedMusicVideos" [image]="song.imagePath" [songName]="song.title" [songDesc]="song.secTitle"></app-cardBig>
+    </app-scroll>
+
+    <div class="text-white flex w-[926px] h-[141px] justify-center">
+        <img class="w-[463px] h-[141px]" src="../../assets/images/songs/image073.jpg" alt="image">
+        <div class="pl-16 flex justify-center flex-col">
+            <p class="font-semibold text-xl">Tell us which artists you like</p>
+            <p class="mt-2 mb-2 font-normal text-[#A5A5A5]">We'll create an experience just for you</p>
+            <app-button [style]="'bg-white rounded-full w-20 h-8 text-sm font-semibold text-black'" [title]="'Lets go'"></app-button>
+        </div>
+    </div>
+
+    <app-scroll [mainTitle]="'In the Zone'" [secTitle]="''" [buttonTitle]="''">
+        <app-card *ngFor="let song of InTheZone" [image]="song.imagePath" [songName]="song.title" [songDesc]="song.secTitle"></app-card>
+    </app-scroll>
+
+    <app-scroll [mainTitle]="'Quick picks'" [secTitle]="'START RADIO FROM A SONG'" [scrollClass]="'flex grid grid-rows-4 grid-flow-col'">
+        <app-cardMini *ngFor="let song of qickPicks" [image]="song.imagePath" [songName]="song.title" [songDesc]="song.secTitle"></app-cardMini>
+    </app-scroll>
+
+    <app-scroll [mainTitle]="'Charts'" [secTitle]="''" [buttonTitle]="'More'">
+        <app-card *ngFor="let song of Charts" [image]="song.imagePath" [songName]="song.title" [songDesc]="song.secTitle"></app-card>
     </app-scroll>
 </div>
