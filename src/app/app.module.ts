@@ -11,6 +11,8 @@ import { scrollComponent } from './scroll/scroll.component';
 import { cardComponent } from './cards/card.component';
 import { cardBigComponent } from './cardsBig/cardBig.component';
 import { cardMiniComponent } from './cardsMini/cardMini.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,17 @@ import { cardMiniComponent } from './cardsMini/cardMini.component';
     scrollComponent,
     cardComponent,
     cardBigComponent,
-    cardMiniComponent
+    cardMiniComponent,
+    NotFoundComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+ 

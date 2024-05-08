@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
     selector:'app-button',
@@ -6,6 +7,10 @@ import { Component, Input } from "@angular/core";
 })
 
 export class buttonTemplate{
+    constructor(private routes:Router) {
+        
+    }
+
     @Input()
     title:string='default'
 
@@ -14,4 +19,10 @@ export class buttonTemplate{
 
     @Input()
     icon:string=''
+
+    buttonClicked(){
+        this.routes.navigate([this.url])
+    }
+    @Input()
+    url:string='/'
 }
