@@ -25,6 +25,9 @@ export class LoginComponent implements OnInit{
     const datas:loginModel =this.loginForm.value as loginModel
     this.userService.useLogin(datas).subscribe(
       (response)=>{
+        localStorage.setItem('user','true')
+        console.log(localStorage);
+        
         this.route.navigate([''])
       },
       (error:any)=>{

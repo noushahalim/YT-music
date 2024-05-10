@@ -1,5 +1,6 @@
 import { Component, Input } from "@angular/core";
 import { Router } from "@angular/router";
+import { UserService } from "../services/user.service";
 
 @Component({
     selector:'app-button',
@@ -7,7 +8,7 @@ import { Router } from "@angular/router";
 })
 
 export class buttonTemplate{
-    constructor(private routes:Router) {
+    constructor(private routes:Router, private userService:UserService) {
         
     }
 
@@ -21,7 +22,11 @@ export class buttonTemplate{
     icon:string=''
 
     buttonClicked(){
-        this.routes.navigate([this.url])
+        if(this.url=='/logout'){
+            this.userService.userLogout()
+        }else{
+            this.routes.navigate([this.url])
+        }
     }
     @Input()
     url:string='/'

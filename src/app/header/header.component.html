@@ -14,7 +14,8 @@
       </div>
       <span class="bg-white w-80"></span>
       <i class="fa-solid fa-ellipsis-vertical text-lg ml-12 mr-6" style="color: #ffffff;"></i>
-      <app-button [url]="'/login'" [title]="'Sign in'" [style]="'bg-white rounded-full w-16 h-8 text-sm font-medium'"></app-button>
+      <app-button *ngIf="!user" [url]="'/login'" [title]="'Sign in'" [style]="'bg-white rounded-full w-16 h-8 text-sm font-medium'"></app-button>
+      <app-button *ngIf="user" [url]="'/logout'" [title]="'logout'" [style]="'bg-white rounded-full w-16 h-8 text-sm font-medium'"></app-button>
     </div>
   </div>
   

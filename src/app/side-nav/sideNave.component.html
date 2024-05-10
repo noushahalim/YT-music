@@ -3,7 +3,8 @@
     <app-button [title]="'Explore'" [icon]="'fa-regular fa-compass text-white'" [style]="'w-56 text-white h-12 flex items-center pl-5 gap-6 rounded-lg hover:bg-[#353535]'"></app-button>
     <app-button [title]="'Library'" [icon]="'fa-regular fa-file-audio text-white'" [style]="'w-56 text-white h-12 flex items-center pl-5 gap-6 rounded-lg hover:bg-[#353535]'"></app-button>
     <hr class="w-48 mt-8 mb-6 border-[#292929]">
-    <app-button [url]="'/login'" [style]="'w-48 h-10 rounded-full bg-[#292929] text-white text-sm font-medium'" [title]="'Sign in'"></app-button>
+    <app-button *ngIf="!user" [url]="'/login'" [style]="'w-48 h-10 rounded-full bg-[#292929] text-white text-sm font-medium'" [title]="'Sign in'"></app-button>
+    <app-button *ngIf="user" [url]="'/logout'" [style]="'w-48 h-10 rounded-full bg-[#292929] text-white text-sm font-medium'" [title]="'Logout'"></app-button>
     <div class="w-48 mt-2">
         <p class="text-[#616161] text-xs">Sign in to create & share playlists, get personalized recommendations, and more.</p>
     </div>

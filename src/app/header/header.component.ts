@@ -1,18 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'] // Import the CSS file here
 })
-export class headerComponent implements OnInit {
-
+export class headerComponent implements OnInit ,DoCheck{
+  user:any
   newClass=''
   newClass2='border-r-2 border-[#292929]'
   newClass3='bg-[#ffffff80]'
 
   ngOnInit() {
     window.addEventListener('scroll', this.handleScroll.bind(this));
+  }
+  
+  ngDoCheck() {
+    this.user=localStorage.getItem('user')
   }
 
   handleScroll() {
